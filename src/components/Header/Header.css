@@ -1,0 +1,19 @@
+.header {
+  position: sticky;
+  background-color: var(--header-background-color);
+  background: var(--header-gradient-background);
+  position: relative;
+  z-index: 1001;
+}
+
+/* Top Gradient Bar */
+.header::before {
+  background: var(--color-primary);
+  background-image: var(--header-top-gradient-bar);
+  content: "";
+  height: 0.315rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

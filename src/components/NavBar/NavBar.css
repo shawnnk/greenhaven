@@ -1,0 +1,184 @@
+.logo {
+  font-size: var(--logo-font-size);
+  font-weight: var(--logo-font-weight);
+  letter-spacing: var(--logo-letter-spacing) !important;
+  text-decoration: none;
+  color: var(--color-primary);
+  background: var(--logo-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: flex;
+  align-items: baseline; /* Fixes logo alignment */
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.logo img {
+  width: 3rem;
+  height: 2.3rem;
+  filter: drop-shadow(0 0.1rem 0.05rem var(--color-accent));
+}
+
+.logo:hover,
+.logo:focus {
+  background: var(--logo-hover-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo:hover img,
+.logo:focus img {
+  transform: scaleY(1.05);
+  filter: drop-shadow(0 0.1rem 0.06rem var(--color-accent));
+}
+
+/* Animated underline */
+.navbar .nav-link {
+  color: var(--nav-link-color) !important;
+  font-size: var(--nav-link-font-size) !important;
+  font-weight: var(--nav-link-font-weight) !important;
+  text-shadow: var(--nav-link-text-shadow);
+  text-decoration: none !important;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0rem;
+  height: 0.1875rem;
+  background: var(--nav-link-active-color);
+  display: block;
+  margin: 0.14rem auto auto auto;
+  transition: width 0.5s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--nav-link-active-color) !important;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 2.1rem;
+}
+
+.nav-link.active {
+  color: var(--nav-link-active-color) !important;
+}
+
+/* hamburger icon on mobile with animated close btn 100vh height*/
+.logo,
+.navbar-toggler {
+  z-index: 1005;
+}
+
+.navbar-toggler,
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+}
+
+/* Slide-down animation for menu */
+.nav-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* When open */
+.nav-collapse.show {
+  position: absolute;
+  max-height: 60rem;
+  background-color: var(--color-primary);
+  background-image: var(--gradient-white);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 6rem;
+  text-align: center;
+}
+
+/* Optional smooth fade-in */
+.nav-collapse .nav-link {
+  opacity: 0;
+  transform: translateY(-0.625rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-collapse.show .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container for the hamburger icon */
+.hamburger-menu {
+  width: 2rem;
+  height: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Base styles for each bar */
+.hamburger-menu .bar {
+  display: block;
+  height: 0.155rem;
+  width: 2rem;
+  border-radius: 0.1875rem;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left center;
+}
+
+.hamburger-menu .bar-one,
+.hamburger-menu .bar-three {
+  background-color: var(--hamburger-light-bar);
+}
+
+.hamburger-menu .bar-two {
+  background-color: var(--hamburger-dark-bar);
+}
+
+/* "Open" state for the X animation */
+.hamburger-menu.open .bar-one,
+.hamburger-menu.open .bar-three {
+  width: 1.6rem;
+}
+
+.hamburger-menu.open .bar-one {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu.open .bar-two {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar-three {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 48rem) {
+  .nav-collapse {
+    overflow: unset;
+  }
+
+  .nav-collapse .nav-link {
+    opacity: 1;
+    transform: translateY(0.625rem);
+  }
+}

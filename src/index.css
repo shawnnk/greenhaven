@@ -1,4 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans+Thai:wght@100..800&display=swap");
+/* font-family:"Mulish", sans-serif; */
+/* font-family:"Playpen Sans Thai", sans-serif; */
 :root {
+  /* fonts */
+  --font-family: "Mulish", sans-serif;
+
+  /* colors */
+
+  --color-black: #242424;
+  --color-white: #ffffff;
+  --color-light-white: #fbfdfb;
+  --color-background: var(--color-white-light);
+  --color-primary: #005713;
+  --color-secondary: #008000;
+  --color-accent: #8fe862;
+  --color-grey: #808080;
+  --color-light-grey: rgb(211, 211, 211);
+  --color-text: #35383b;
+
+  /* primary-shades*/
+  --primary-50: #e5ffeb;
+  --primary-100: #ccffd7;
+  --primary-200: #99ffaf;
+  --primary-300: #66ff87;
+  --primary-400: #33ff5f;
+  --primary-500: #00ff37;
+  --primary-600: #00cc2c;
+  --primary-700: #009921;
+  --primary-800: #006616;
+  --primary-900: #00330b;
+  --primary-950: #001a06;
+
+  /* common */
+  --border-radius: 1.2rem;
+  --text-shadow-white: 0.125rem 0.125rem 0.3125rem rgba(255, 255, 255, 0.2);
+  --text-shadow: 0.125rem 0.125rem 0.3125rem #000;
+  --box-shadow: 0rem 0.9375rem 1.5625rem rgba(0, 0, 0, 0.08);
+  --transition: all 0.5s ease;
+
+  /* Body */
+  --font-weight-body: 400;
+  --font-size-body: 1.125rem;
+  --letter-spacing-body: 0.035rem;
+  --word-spacing-body: var(--spacing-xs);
+  --text-transform-body: none;
+
+  /* header */
+  --gradient-white: linear-gradient(
+    96deg,
+    var(--color-white),
+    var(--color-light-white) 100%
+  );
+
+  --gradient-header-top-bar: linear-gradient(
+    96deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent)
+  );
+
+  --gradient-logo: linear-gradient(
+    135deg,
+    var(--color-primary) 30%,
+    var(--color-secondary) 75%,
+    var(--color-accent) 100%
+  );
+
+  --gradient-logo-hover: linear-gradient(
+    135deg,
+    var(--color-primary) 30%,
+    var(--color-secondary) 100%
+  );
+
+  --header-background-color: var(--color-background);
+  --header-top-gradient-bar: var(--gradient-header-top-bar);
+  --header-gradient-background: var(--gradient-white);
+
+  --logo-gradient: var(--gradient-logo);
+  --logo-hover-gradient: var(--gradient-logo-hover);
+  --logo-font-size: 2rem;
+  --logo-font-weight: 600;
+  --logo-letter-spacing: -0.05rem;
+
+  --hamburger-dark-bar: var(--color-primary);
+  --hamburger-light-bar: var(--color-secondary);
+
+  --navbar-background-color: var(--gradient-white);
+  --nav-link-font-size: 1.1rem !important;
+  --nav-link-font-weight: 600;
+  --nav-link-text-shadow: none !important;
+  --nav-link-color: var(--color-grey);
+  --nav-link-active-color: var(--color-primary);
+}
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +159,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
