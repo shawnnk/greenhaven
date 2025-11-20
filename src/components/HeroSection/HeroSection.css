@@ -1,0 +1,89 @@
+.carousel-hero {
+  position: relative;
+  height: 24rem;
+  background-size: cover;
+  background-position: var(--mobile-pos, center top);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom right,
+      rgba(30, 121, 12, 1),
+      rgba(0, 0, 0, 0.2)
+    ),
+    radial-gradient(circle at 15% 45%, rgba(0, 0, 0, 0.95), transparent 70%);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.048);
+  /* backdrop-filter: brightness(0.9); */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 0 1rem;
+  /* max-width: 60rem; */
+  letter-spacing: 0.005rem;
+  word-spacing: var(--spacing-small);
+}
+
+/* Responsive modern typography */
+.hero-content h1 {
+  /* font-size: clamp(1.75rem, 4vw + 1rem, 3.5rem); */
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: var(--text-shadow-hero);
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2vw, 1.15rem);
+  max-width: 21rem;
+  text-shadow: var(--text-shadow-lg);
+}
+
+.mobile-wave {
+  display: block;
+  position: relative;
+  z-index: 5;
+  background: var(--gradient-secondary);
+  height: 3.375rem;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.mobile-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Desktop optimization */
+@media (min-width: 768px) {
+  .carousel-hero {
+    height: 27.5rem;
+    background-size: cover;
+    background-position: var(--desktop-pos, center right);
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
-import logo from "/images/logo-21-t.png";
+import logo from "/images/logo.png";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -27,13 +27,13 @@ const NavBar = () => {
       sticky="top"
     >
       <Container className="header-container">
-        <Link to="/" className="logo">
+        <Link to="/" className="navbar-brand">
           <img
-            alt=""
+            alt="eco-friendly house with leaves"
             src={logo}
             // width="60"
             // height="40"
-            className="d-inline-block align-bottom"
+            className="logo d-inline-block align-top"
           />
           Plant Haven
         </Link>

@@ -1,4 +1,4 @@
-.logo {
+.navbar-brand {
   font-size: var(--logo-font-size);
   font-weight: var(--logo-font-weight);
   letter-spacing: var(--logo-letter-spacing) !important;
@@ -8,31 +8,28 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  display: flex;
-  align-items: baseline; /* Fixes logo alignment */
+  /* display: flex;
+  gap: -1.5rem;
+  align-items: baseline; Fixes logo alignment */
   white-space: nowrap;
   transition: var(--transition);
 }
 
-.logo img {
-  width: 3rem;
-  height: 2.3rem;
+.logo {
+  transform: translateY(-8px);
+  width: 4.6rem;
+  height: 2.8rem;
   filter: drop-shadow(0 0.1rem 0.05rem var(--color-accent));
 }
 
-.logo:hover,
-.logo:focus {
+.navbar-brand:hover,
+.navbar-brand:focus {
+  /* transform: scaleY(1.05); */
   background: var(--logo-hover-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.logo:hover img,
-.logo:focus img {
-  transform: scaleY(1.05);
-  filter: drop-shadow(0 0.1rem 0.06rem var(--color-accent));
+  filter: drop-shadow(0 0.01rem 0.01rem var(--color-primary-800));
 }
 
 /* Animated underline */
@@ -127,7 +124,7 @@
 /* Container for the hamburger icon */
 .hamburger-menu {
   width: 2rem;
-  height: 1.3rem;
+  height: 1.35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
