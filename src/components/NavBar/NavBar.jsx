@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
-import logo from "/images/logo.png";
+import logo from "/images/logo-12-t.png";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -23,7 +23,7 @@ const NavBar = () => {
       collapseOnSelect
       expand="md"
       expanded={expanded}
-      className="navbar pt-3 pb-2 shadow-sm"
+      className="navbar shadow-sm py-2"
       sticky="top"
     >
       <Container className="header-container">
@@ -33,9 +33,9 @@ const NavBar = () => {
             src={logo}
             // width="60"
             // height="40"
-            className="logo d-inline-block align-top"
+            className="logo d-inline-block "
           />
-          Plant Haven
+          Green Haven
         </Link>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

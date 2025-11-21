@@ -16,7 +16,10 @@
   --color-accent: #8fe862;
   --color-grey: #808080;
   --color-light-grey: rgb(211, 211, 211);
-  --color-text: #35383b;
+  --color-text: #212529bf;
+  --color-text-dark: #212529;
+  --color-headings: var(--color-text-dark);
+  /* #35383b; */
 
   /* primary-shades*/
   --color-primary-50: #e5ffeb;
@@ -90,8 +93,11 @@
   --text-shadow-hero: 0.2rem 0.125rem 0.2rem rgba(0, 0, 0, 0.8);
 
   /* box shadows */
-  --box-shadow: 0 0.875rem 2.5rem rgba(0, 0, 0, 0.55);
-
+  /* --box-shadow: 0 0.875rem 2.5rem rgba(0, 0, 0, 0.55); */
+  --box-shadow-image: 6px 2px 16px 0px rgba(136, 165, 191, 0.48),
+    -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
+  /* 0 0.875rem 2.5rem rgb(0, 87, 19, 0.4); */
+  /* 0 0 1.5625rem rgb(0, 87, 19, 0.8); */
   /* common */
   --border-radius: 1.2rem;
   --text-shadow-white: 0.125rem 0.125rem 0.3125rem rgba(255, 255, 255, 0.2);
@@ -101,16 +107,28 @@
 
   /* Body */
   --font-weight-body: 400;
-  --font-size-body: 1.125rem;
+  --font-size-body: 1rem;
   --letter-spacing-body: 0.035rem;
   --word-spacing-body: var(--spacing-xs);
-  --text-transform-body: none;
+  --color-text-body: var(--color-text);
 
   /* Buttons  */
-  --gradient-btn: linear-gradient(to left, #008000, #014401, #012b01);
-  --gradient-btn-hover: linear-gradient(to right, #008000, #014401, #012b01);
+  --gradient-btn: linear-gradient(
+    to right,
+    var(--color-primary-900),
+    var(--color-primary-800),
+    var(--color-primary-700)
+  );
+  /* #008000, #014401, #012b01); */
+  /* --gradient-btn-hover: linear-gradient(
+    to left,
+    var(--color-primary-800),
+    var(--color-primary-700),
+    var(--color-primary-600)
+  ); */
   --btn-font-weight: 600;
   --btn-font-size: clamp(0.9rem, 2vw, 1.1rem);
+  --btn-text-color: var(--color-white);
   /* 0.875rem; */
   --btn-letter-spacing: 0.04rem;
   --btn-word-spacing: none !important;
@@ -138,17 +156,19 @@
   );
 
   --gradient-logo: linear-gradient(
-    135deg,
-    var(--color-primary) 30%,
-    var(--color-secondary) 75%,
-    var(--color-accent) 100%
-  );
+      135deg,
+      var(--color-primary) 30%,
+      var(--color-secondary) 60%,
+      var(--color-accent) 100%
+    )
+    0%/ 100%;
 
   --gradient-logo-hover: linear-gradient(
-    135deg,
-    var(--color-primary) 30%,
-    var(--color-secondary) 100%
-  );
+      135deg,
+      var(--color-primary) 30%,
+      var(--color-secondary) 100%
+    )
+    20%/ 120%;
 
   --header-background-color: var(--color-background);
   --header-top-gradient-bar: var(--gradient-header-top-bar);
@@ -157,7 +177,7 @@
   --logo-gradient: var(--gradient-logo);
   --logo-hover-gradient: var(--gradient-logo-hover);
   --logo-font-size: 2rem;
-  --logo-font-weight: 600;
+  --logo-font-weight: 700;
   --logo-letter-spacing: -0.1rem;
   --hamburger-dark-bar: var(--color-primary);
   --hamburger-light-bar: var(--color-secondary);
@@ -175,7 +195,6 @@
 *:before {
   margin: 0;
   padding: 0;
-  font-size: 1.05rem;
   border: 0 solid !important;
   box-sizing: border-box !important;
   text-decoration: none !important;
@@ -205,17 +224,16 @@ body {
   margin: 0;
   background-color: var(--color-background);
   background: var(--gradient-white) !important;
-  color: var(--color-text);
+  color: var(--color-text-body) !important;
+
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size-body) !important;
+  font-weight: var(--font-weight-body);
+  letter-spacing: var(--letter-spacing-body);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
   overflow-x: hidden;
-  font-family: var(--font-family) !important;
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-body);
-  letter-spacing: var(--letter-spacing-body);
-  /* word-spacing: var(--word-spacing-body); */
-  text-transform: var(--text-transform-body);
 }
 
 a,
@@ -232,10 +250,12 @@ img {
   height: auto;
 }
 
-strong {
+/* strong {
   color: var(--color-grey-dark);
+} */
+strong {
+  color: var(--color-text-dark);
 }
-
 h1 {
   margin: 0;
   padding: 0;
@@ -247,18 +267,25 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text) !important;
-  font-weight: 600 !important;
+  color: var(--color-headings) !important;
+  font-weight: 700 !important;
   line-height: 1.3125rem;
+  padding-bottom: 0.8rem;
 }
 
-h2 {
+.section-title {
   padding-top: 2rem;
   padding-bottom: 1rem;
+  font-weight: 700 !important;
+}
+
+h5 {
+  font-weight: 800 !important;
 }
 
 .btn {
   outline: 0 !important;
+  color: var(--btn-text-color) !important;
   background-color: var(--btn-color);
   padding: 0.5rem !important;
   white-space: nowrap;
@@ -271,7 +298,7 @@ h2 {
   border-width: 1px !important;
   border-style: solid;
   border-color: var(--btn-border-color) !important;
-  box-shadow: var(--btn-box-shadow);
+  /* box-shadow: var(--btn-box-shadow); */
   transition: var(--btn-transition);
   cursor: pointer;
 }
@@ -288,6 +315,18 @@ h2 {
   box-shadow: var(--btn-hover-box-shadow);
 }
 
+.btn-green {
+  background-color: var(--btn-color);
+  background: var(--gradient-btn);
+  /* box-shadow: var(--btn-box-shadow); */
+}
+
+.btn-green:hover {
+  transition: transform ease 0.2s;
+  /* background: var(--gradient-btn-hover); */
+  box-shadow: 0 0.625rem 1.5625rem -0.3125rem var(--color-primary-900);
+}
+
 .section-wrapper {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -295,16 +334,26 @@ h2 {
 
 .section-wrapper:not(.hero-section):not(.testimonials-section):nth-child(even) {
   /* background-color: rgb(229, 255, 235, 1); */
-  background-color: hsla(128, 81%, 93%, 1);
+  /* background-color: hsla(128, 81%, 93%, 1);
   background-image: radial-gradient(
       at 36% 77%,
       hsla(96, 64%, 96%, 1) 0px,
       transparent 50%
     ),
     radial-gradient(at 81% 26%, hsla(129, 64%, 96%, 1) 0px, transparent 50%),
-    radial-gradient(at 20% 30%, hsla(73, 64%, 96%, 1) 0px, transparent 50%);
+    radial-gradient(at 20% 30%, hsla(73, 64%, 96%, 1) 0px, transparent 50%); */
 }
 
+.section-wrapper:nth-child(odd) {
+  background-color: var(--color-white) !important;
+  background-image: radial-gradient(
+    100% 50% at 50% 0,
+    rgba(0, 163, 255, 0.13) 0,
+    rgba(0, 163, 255, 0) 50%,
+    rgba(0, 163, 255, 0) 100%
+  );
+  background-blend-mode: multiply;
+}
 .container-wrapper {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
