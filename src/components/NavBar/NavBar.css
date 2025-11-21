@@ -8,17 +8,18 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* display: flex;
-  gap: -1.5rem;
-  align-items: baseline; Fixes logo alignment */
+  display: flex;
+  gap: 0.15rem;
+  align-items: baseline;
+  /* Fixes logo alignment */
   white-space: nowrap;
   transition: var(--transition);
 }
 
 .logo {
-  transform: translateY(-8px);
-  width: 4.6rem;
-  height: 2.8rem;
+  /* transform: translateY(-8px); */
+  width: 2.5rem;
+  height: 1.8rem;
   filter: drop-shadow(0 0.1rem 0.05rem var(--color-accent));
 }
 
@@ -39,7 +40,7 @@
   font-weight: var(--nav-link-font-weight) !important;
   text-shadow: var(--nav-link-text-shadow);
   text-decoration: none !important;
-  vertical-align: bottom;
+  vertical-align: baseline;
   position: relative;
 }
 
@@ -112,7 +113,7 @@
 /* Optional smooth fade-in */
 .nav-collapse .nav-link {
   opacity: 0;
-  transform: translateY(-0.625rem);
+  transform: translateY(0.35rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -176,6 +177,6 @@
 
   .nav-collapse .nav-link {
     opacity: 1;
-    transform: translateY(0.625rem);
+    /* transform: translateY(0.625rem); */
   }
 }
