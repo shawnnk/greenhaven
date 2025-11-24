@@ -17,7 +17,7 @@
   --color-grey: #808080;
   --color-light-grey: rgb(211, 211, 211);
   --color-text: #212529bf;
-  --color-text-dark: #212529;
+  --color-text-dark: #213547;
   --color-headings: var(--color-text-dark);
   /* #35383b; */
 
@@ -106,7 +106,7 @@
   --transition: all 0.5s ease;
 
   /* Body */
-  --font-weight-body: 400;
+  --font-weight-body: 500;
   --font-size-body: 1rem;
   --letter-spacing-body: 0.035rem;
   --word-spacing-body: var(--spacing-xs);
@@ -228,7 +228,7 @@ body {
 
   font-family: var(--font-family) !important;
   font-size: var(--font-size-body) !important;
-  font-weight: var(--font-weight-body);
+  font-weight: var(--font-weight-body) !important;
   letter-spacing: var(--letter-spacing-body);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -256,6 +256,15 @@ img {
 strong {
   color: var(--color-text-dark);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
 h1 {
   margin: 0;
   padding: 0;
@@ -268,15 +277,21 @@ h4,
 h5,
 h6 {
   color: var(--color-headings) !important;
-  font-weight: 700 !important;
-  line-height: 1.3125rem;
-  padding-bottom: 0.8rem;
+  font-weight: 800 !important;
+  /* line-height: 1.1 !important; */
+  /* padding-bottom: 0.8rem; */
 }
 
 .section-title {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  font-weight: 700 !important;
+  margin: 2rem auto !important;
+  text-align: center;
+  /* line-height: 1.2 !important; */
+  /* font-weight: 700 !important; */
+}
+
+.section-subtitle {
+  padding-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 h5 {
@@ -354,6 +369,7 @@ h5 {
   );
   background-blend-mode: multiply;
 }
+
 .container-wrapper {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -366,8 +382,35 @@ h5 {
 
 @media (min-width: 62rem) {
   .container {
-    max-width: 56rem !important;
+    max-width: 60rem !important;
     /* background-color: red !important; */
+  }
+}
+
+/* animations */
+/* Fade-in animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in.delay-1s {
+  animation-delay: 0.3s;
+}
+
+.fade-in.delay-2s {
+  animation-delay: 0.6s;
+}
+
+.fade-in.delay-3s {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
