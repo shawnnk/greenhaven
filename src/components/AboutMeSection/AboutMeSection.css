@@ -1,0 +1,86 @@
+.aboutme-section {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutme-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/bg-leaves.png");
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.aboutme-content {
+  display: flow-root;
+  float: none;
+  text-align: left;
+}
+
+.aboutme-image {
+  width: 100%;
+  height: 18rem;
+  display: block;
+  order: 1;
+  float: none;
+  margin-bottom: 1rem;
+}
+
+.aboutme-content span {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-secondary);
+  transition: var(--transition-medium);
+}
+
+.aboutme-badge .badge {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.65rem;
+  background-color: var(--color-grey) !important;
+  color: var(--color-white);
+  transition: var(--transition-medium);
+}
+
+.aboutme-badge:hover .badge,
+.aboutme-badge:focus .badge {
+  background-color: var(--color-text-dark) !important;
+}
+
+.btn-aboutme {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 40rem) {
+  .aboutme-image {
+    width: 100%;
+    height: 21rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .aboutme-image {
+    float: right;
+    width: 21rem;
+    height: 25rem;
+    margin: 0.8rem 2rem 0.8rem 1.8rem;
+    clip-path: polygon(22% 0, 100% 0%, 99% 100%, 0 100%);
+    shape-outside: polygon(22% 0, 100% 0%, 99% 100%, 0 100%);
+  }
+}
+
+@media (min-width: 60rem) {
+  .aboutme-image {
+    width: 30rem;
+    height: 21rem;
+    margin-left: 1.5rem;
+  }
+}
