@@ -5,7 +5,7 @@ import aboutImage from "/images/about.png";
 import aboutLeftImage from "/images/about-bg.png";
 import "./AboutSection.css";
 
-export default function AboutSection() {
+const AboutSection = () => {
   return (
     <section id="about-section" className="about-section section-wrapper">
       <img src={aboutLeftImage} className="left-plant" alt="" />
@@ -94,4 +94,6 @@ export default function AboutSection() {
       </Container>
     </section>
   );
-}
+};
+
+export default AboutSection;
