@@ -34,9 +34,9 @@
 }
 
 .aboutme-content span {
-  font-weight: 600;
-  font-style: italic;
-  color: var(--color-secondary);
+  font-weight: 700;
+  /* font-style: italic; */
+  color: var(--color-text-dark);
   transition: var(--transition-medium);
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import SectionTitle from "../SectionTitle/SectionTitle";
 import aboutImage from "/images/about.png";
 import aboutLeftImage from "/images/about-bg.png";
 import "./AboutSection.css";
@@ -11,11 +12,12 @@ const AboutSection = () => {
       <img src={aboutLeftImage} className="left-plant" alt="" />
 
       <Container className="container-wrapper">
+        <SectionTitle title="Why Indoor Plants?" subTitle="About" />
         <Row className="about-content justify-content-center align-items-center">
           <Col>
-            <h2 className="display-4 section-title fade-in">
+            {/* <h2 className="display-4 section-title fade-in">
               Why Indoor Plants?
-            </h2>
+            </h2> */}
 
             <p>
               Indoor plants do more than decorate — they help clean the air,
