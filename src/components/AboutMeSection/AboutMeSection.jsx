@@ -3,18 +3,15 @@ import { Container, Row, Col, Badge } from "react-bootstrap";
 import aboutmeImage from "/images/aboutme.jpg";
 import "./AboutMeSection.css";
 import { Link } from "react-router-dom";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const AboutMeSection = () => {
   return (
     <section id="aboutme" className="aboutme-section section-wrapper">
       <Container className="container-wrapper">
+        <SectionTitle title="My Green Journey" subTitle="About Me" />
         <Row className="aboutme-content justify-content-center align-items-center">
           <Col>
-            <p className="section-subtitle">About Me</p>
-            <h2 className="display-4 section-title fade-in">
-              My Green Journey
-            </h2>
-
             <p>
               Since 2019, my passion for indoor plants has blossomed into a
               mission to improve my family's well-being. Inspired by{" "}
@@ -45,7 +42,7 @@ const AboutMeSection = () => {
               roots, soil, and associated microorganisms working together as
               nature's life-support system{" "}
               <Link
-                to="https://en.wikipedia.org/wiki/NASA_Clean_Air_Study#List_of_plants_studied"
+                to="https://nasa.fandom.com/wiki/NASA_Clean_Air_Study"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="aboutme-badge"
