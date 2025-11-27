@@ -1,10 +1,13 @@
 .section-title {
-  margin: 0 auto 1.5rem auto !important;
-  line-height: 1 !important;
+  color: var(--section-title-color);
+  font-size: var(--section-title-font-size);
+  font-weight: var(--section-title-font-weight);
+  text-align: center;
+  /* line-height: 1 !important; */
 }
 
 .section-description {
-  font-size: 1rem;
-  max-width: 50rem;
-  margin: 0 auto 3rem auto;
+  font-size: var(--section-description-font-size);
+  max-width: var(--section-description-max-width);
+  margin: var(--section-description-margin);
 }

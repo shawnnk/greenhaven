@@ -189,6 +189,24 @@
   --nav-link-text-shadow: none !important;
   --nav-link-color: var(--color-grey);
   --nav-link-active-color: var(--color-primary);
+
+  /* section titles & description */
+  --section-title-color: var(--color-text-dark);
+  --section-title-font-size: clamp(1.8rem, 4vw, 3rem);
+
+  /* --section-font-size: clamp(1.5rem, 3vw, 2.5rem); */
+  --section-title-font-weight: 700;
+  --section-description-color: var(--color-text-body);
+  --section-description-font-size: clamp(1rem, 2vw, 1.25rem);
+  --section-description-max-width: 50rem;
+  --section-description-margin: 2rem auto 3rem;
+
+  /* plan benefits section */
+  --benefits-card-background-color: var(--color-white);
+  --card-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --card-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
+
+  /* footer */
 }
 
 *,
