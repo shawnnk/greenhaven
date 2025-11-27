@@ -13,7 +13,7 @@ const AboutSection = () => {
 
       <Container className="container-wrapper">
         <SectionTitle title="Why Indoor Plants?" subTitle="About" />
-        <Row className="about-content justify-content-center align-items-center">
+        <Row className="about-content justify-content-center align-items-center fade-in delay-1s">
           <Col>
             {/* <h2 className="display-4 section-title fade-in">
               Why Indoor Plants?

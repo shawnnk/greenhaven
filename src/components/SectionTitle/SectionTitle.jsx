@@ -2,12 +2,12 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import "./SectionTitle.css";
 
-const SectionTitle = ({ title, subTitle }) => {
+const SectionTitle = ({ title, description }) => {
   return (
-    <Row className="fade-in justify-content-center">
+    <Row className="justify-content-center align-items-center text-center fade-in">
       <Col>
-        <p className="section-subtitle">{subTitle}</p>
         <h2 className="display-4 section-title">{title}</h2>
+        <p className="section-description">{description}</p>
       </Col>
     </Row>
   );
