@@ -1,0 +1,25 @@
+.benefits-card {
+  background-color: var(--color-light-white);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
+  transition: var(--transition-medium);
+}
+
+.card:hover .benefit-icon {
+  transform: scale(1.2);
+}
+
+.card {
+  border: none;
+  transition: var(--transition-medium);
+}
+
+.card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

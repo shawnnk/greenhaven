@@ -10,7 +10,7 @@ const AboutMeSection = () => {
     <section id="aboutme" className="aboutme-section section-wrapper">
       <Container className="container-wrapper">
         <SectionTitle title="My Green Journey" subTitle="About Me" />
-        <Row className="aboutme-content justify-content-center align-items-center">
+        <Row className="aboutme-content justify-content-center align-items-center fade-in delay-1s">
           <Col>
             <p>
               Since 2019, my passion for indoor plants has blossomed into a
@@ -32,7 +32,11 @@ const AboutMeSection = () => {
               difference in creating a more vibrant and healthy living space.
             </p>
 
-            <img src={aboutmeImage} alt="About Me" className="aboutme-image" />
+            <img
+              src={aboutmeImage}
+              alt="About Me"
+              className="aboutme-image fade-in delay-1s"
+            />
 
             <p>
               I began by introducing a variety of houseplants, each chosen for

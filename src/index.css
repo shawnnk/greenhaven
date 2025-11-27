@@ -14,6 +14,7 @@
   --color-primary: #005713;
   --color-secondary: #008000;
   --color-accent: #8fe862;
+  --color-accent-light: #e5ffeb4d;
   --color-grey: #808080;
   --color-light-grey: rgb(211, 211, 211);
   --color-text: #212529bf;
@@ -223,7 +224,7 @@ li {
 body {
   margin: 0;
   background-color: var(--color-background);
-  background: var(--gradient-white) !important;
+  /* background: var(--gradient-white) !important; */
   color: var(--color-text-body) !important;
 
   font-family: var(--font-family) !important;
@@ -282,7 +283,6 @@ h6 {
   /* padding-bottom: 0.8rem; */
 }
 
-
 h5 {
   font-weight: 800 !important;
 }
@@ -331,12 +331,12 @@ h5 {
 }
 
 .section-wrapper {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .section-wrapper:not(.hero-section):not(.testimonials-section):nth-child(even) {
-  background-color: rgb(229, 255, 235, 0.3);
+  background-color: var(--color-accent-light) !important;
 }
 
 .section-wrapper:nth-child(odd) {
