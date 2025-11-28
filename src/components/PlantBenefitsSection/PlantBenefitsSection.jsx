@@ -26,8 +26,8 @@ const PlantBenefitsSection = () => {
                   >
                     {benefit.icon}
                   </div>
-                  <h5 className="card-title">{benefit.title}</h5>
-                  <p className="card-text text-muted">{benefit.description}</p>
+                  <Card.Title> {benefit.title}</Card.Title>
+                  <Card.Text>{benefit.description}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
