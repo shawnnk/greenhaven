@@ -1,0 +1,36 @@
+.category-card {
+  /* position: relative; */
+  /* padding-bottom: 0 !important; */
+}
+
+.categories-section .card-image {
+  aspect-ratio: 3 / 2 !important; /* Sets a 16:9 aspect ratio */
+  object-fit: cover !important; /* Ensures the image fills the space without distortion */
+  width: 100% !important;
+}
+
+.category-card .category-description11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* padding-top: 1.5rem;
+  padding-bottom: 1.5rem; */
+  opacity: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: var(--transition-medium);
+}
+
+.category-card:hover11 .category-description {
+  opacity: 1;
+}
