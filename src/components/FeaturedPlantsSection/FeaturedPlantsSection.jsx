@@ -19,7 +19,7 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
   return (
     <section
       id="featuredPlants-section"
-      className="FeaturedPlants-section section-wrapper"
+      className="featuredPlants-section section-wrapper"
     >
       {/* <img src={aboutLeftImage} className="left-plant" alt="" /> */}
 
@@ -31,7 +31,7 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
         <Row className="fade-in delay-1s">
           {preview.map((plant) => (
             <Col key={plant.id} md={4} className="mb-3">
-              <Card className="card h-100 ">
+              <Card className="h-100 card">
                 <div className="card-image-wrapper">
                   <Card.Img
                     variant="top"
@@ -46,7 +46,7 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
                 <Card.Footer>
                   <Link
                     to={`/plants/${plant.id}`}
-                    className="btn btn-green btn-aboutme"
+                    className="btn btn-green btn-card"
                   >
                     View Details
                   </Link>

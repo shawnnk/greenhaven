@@ -6,6 +6,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import AboutMeSection from "../../components/AboutMeSection/AboutMeSection";
 import PlantBenefitsSection from "../../components/PlantBenefitsSection/PlantBenefitsSection";
 import FeaturedPlantsSection from "../../components/FeaturedPlantsSection/FeaturedPlantsSection";
+import CategoriesSection from "../../components/CategoriesSection/CategoriesSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <AboutSection />
       <PlantBenefitsSection />
       <FeaturedPlantsSection />
+      <CategoriesSection />
       <AboutMeSection />
     </>
   );
