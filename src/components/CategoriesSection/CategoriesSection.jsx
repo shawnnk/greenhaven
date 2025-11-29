@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card,Button  } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { SECTION_CONFIG } from "../../data/config/SectionConfig";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -7,6 +7,7 @@ import { CategoriesData } from "../../data/CategoriesData";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { PiClockCountdownBold } from "react-icons/pi";
 import "./CategoriesSection.css";
+
 
 const CategoriesSection = ({ limit = 4 }) => {
   const preview = CategoriesData.slice(0, limit);
@@ -55,9 +56,12 @@ const CategoriesSection = ({ limit = 4 }) => {
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                  <Link to={`/blog/${1}`} className="btn btn-green btn-card">
+                  <Button
+                    // to={`/plants}`}
+                    className="btn btn-green btn-card"
+                  >
                     View Details
-                  </Link>
+                  </Button>
                 </Card.Footer>
               </Card>
             </Col>

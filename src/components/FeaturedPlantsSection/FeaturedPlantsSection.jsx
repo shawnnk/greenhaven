@@ -1,20 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { PlantsData } from "../../data/PlantsData";
+import { SECTION_CONFIG } from "../../data/config/SectionConfig";
+import { FeaturedPlantsData } from "../../data/FeaturedPlantsData";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import { FaLeaf, FaSeedling } from "react-icons/fa";
-import { RiPlantFill } from "react-icons/ri";
 import "./FeaturedPlantsSection.css";
 
-const SECTION_CONFIG = {
-  title: "Featured Air-Purifying Plants",
-  description:
-    "Discover our handpicked selection of the most effective air-purifying plants to enhance your indoor air quality and bring nature into your home.",
-};
-
 const FeaturedPlantsSection = ({ limit = 3 }) => {
-  const preview = PlantsData.slice(0, limit);
+  const preview = FeaturedPlantsData.slice(0, limit);
 
   return (
     <section
@@ -25,8 +18,8 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
 
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.title}
-          description={SECTION_CONFIG.description}
+          title={SECTION_CONFIG.featuredPlants.title}
+          description={SECTION_CONFIG.featuredPlants.description}
         />
         <Row className="fade-in delay-1s">
           {preview.map((plant) => (
@@ -40,7 +33,10 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
                   />
                 </div>
                 <Card.Body>
-                  <Card.Title>{plant.name}</Card.Title>
+                  <Card.Title className="text-center">{plant.title}</Card.Title>
+                  <Card.Subtitle className="text-center mb-2 text-muted">
+                    {plant.subtitle}
+                  </Card.Subtitle>
                   <Card.Text>{plant.description}</Card.Text>
                 </Card.Body>
                 <Card.Footer>

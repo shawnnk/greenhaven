@@ -1,3 +1,5 @@
+import Gallery from "../../pages/Gallery/Gallery";
+
 export const SECTION_CONFIG = {
   featuredPlants: {
     title: "Featured Air-Purifying Plants",
@@ -12,6 +14,17 @@ export const SECTION_CONFIG = {
     title: "Plant Care & Insights",
     description:
       "Explore our curated blog posts about plant care, types, and how to choose the right plants for your lifestyle and environment.",
+  },
+  gallery: {
+    title: "Plant Inspiration Gallery",
+    description:
+      "Explore our gallery of beautiful air-purifying plants in various settings to inspire your own green space.",
+    // "Browse our gallery of beautiful air-purifying plants in various settings to inspire your own green space.",
+  },
+  plantBenefits: {
+    title: "Why Air-Purifying Plants?",
+    description:
+      "Discover how air-purifying plants can enhance your home and well-being. From cleaner air to better sleep, these natural wonders offer countless benefits for a healthier, happier lifestyle.",
   },
   aboutUs: {
     title: "About Our Plant Collection",
