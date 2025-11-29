@@ -3,11 +3,41 @@
   font-size: var(--section-title-font-size);
   font-weight: var(--section-title-font-weight);
   text-align: center;
-  /* line-height: 1 !important; */
 }
 
 .section-description {
   font-size: var(--section-description-font-size);
   max-width: var(--section-description-max-width);
   margin: var(--section-description-margin);
+}
+
+.section-subtitle {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-secondary) !important;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-subtitle::before,
+.section-subtitle::after {
+  background-color: var(--color-text-dark);
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 0.18rem;
+  position: relative;
+  vertical-align: middle;
+}
+
+.section-subtitle::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.section-subtitle::after {
+  left: 0.5em;
+  margin-right: -50%;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { SECTION_CONFIG } from "../../data/config/SectionConfig";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -41,6 +41,7 @@ const GallerySection = () => {
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.gallery.title}
+          subtitle={SECTION_CONFIG.gallery.subtitle}
           description={SECTION_CONFIG.gallery.description}
         />
         <Row className="fade-in delay-1s">

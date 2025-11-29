@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import SectionTitle from "../SectionTitle/SectionTitle";
 import { SECTION_CONFIG } from "../../data/config/SectionConfig";
 import { FeaturedPlantsData } from "../../data/FeaturedPlantsData";
-import SectionTitle from "../SectionTitle/SectionTitle";
 import "./FeaturedPlantsSection.css";
 
 const FeaturedPlantsSection = ({ limit = 3 }) => {
@@ -19,6 +19,7 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.featuredPlants.title}
+          subtitle={SECTION_CONFIG.featuredPlants.subtitle}
           description={SECTION_CONFIG.featuredPlants.description}
         />
         <Row className="fade-in delay-1s">

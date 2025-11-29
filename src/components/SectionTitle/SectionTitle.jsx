@@ -2,12 +2,13 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import "./SectionTitle.css";
 
-const SectionTitle = ({ title, description }) => {
+const SectionTitle = ({ title, subtitle, description }) => {
   return (
     <Row className="justify-content-center align-items-center text-center fade-in">
       <Col>
-        <h2 className="section-title">{title}</h2>
-        <p className="section-description">{description}</p>
+        {subtitle && <h5 className="section-subtitle">{subtitle}</h5>}
+        {subtitle && <h2 className="section-title">{title}</h2>}
+        {description && <p className="section-description">{description}</p>}
       </Col>
     </Row>
   );

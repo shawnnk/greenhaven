@@ -8,6 +8,7 @@ import PlantBenefitsSection from "../../components/PlantBenefitsSection/PlantBen
 import FeaturedPlantsSection from "../../components/FeaturedPlantsSection/FeaturedPlantsSection";
 import CategoriesSection from "../../components/CategoriesSection/CategoriesSection";
 import GallerySection from "../../components/GallerySection/GallerySection";
+import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <FeaturedPlantsSection />
       <CategoriesSection />
       <AboutMeSection />
+      <TestimonialsSection />
       <GallerySection />
     </>
   );
