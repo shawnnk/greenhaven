@@ -1,8 +1,9 @@
 // PlantsData.js
-export const PlantsData = [
+export const FeaturedPlantsData = [
   {
     id: 1,
-    name: "Snake Plant",
+    title: "Snake Plant",
+    subtitle: "Hardy | Beginner Friendly",
     image: "/images/plants/snake-plant.jpg",
     description:
       "A hardy plant that thrives in low light and requires minimal watering. Effective at removing formaldehyde, benzene, xylene, toluene, and nitrogen oxides [1].",
@@ -10,7 +11,8 @@ export const PlantsData = [
   },
   {
     id: 2,
-    name: "Peace Lily",
+    title: "Peace Lily",
+    subtitle: "Elegant | Air Cleaner",
     image: "/images/plants/peace-lily.jpg",
     description:
       "An excellent air purifier that can thrive in low light conditions. Removes formaldehyde, benzene, trichloroethylene, xylene, and ammonia [1].",
@@ -18,7 +20,8 @@ export const PlantsData = [
   },
   {
     id: 3,
-    name: "Spider Plant",
+    title: "Spider Plant",
+    subtitle: "Fast Growing | Pet Safe",
     image: "/images/plants/spider-plant.jpg",
     description:
       "A low-maintenance plant that is great for beginners and can thrive in a variety of conditions. Known for removing formaldehyde, xylene, and toluene [1].",
