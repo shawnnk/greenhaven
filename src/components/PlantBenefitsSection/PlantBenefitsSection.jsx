@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import { plantBenefitsData } from "../../data/PlantsBenefitsData";
+import { SECTION_CONFIG } from "../../data/config/SectionConfig";
+import { plantBenefitsData } from "../../data/PlantBenefitsData";
 import "./PlantBenefitsSection.css";
 
 const PlantBenefitsSection = () => {
@@ -9,12 +10,10 @@ const PlantBenefitsSection = () => {
     <section id="benefits-section" className="benefits-section section-wrapper">
       <Container className="container-wrapper">
         <SectionTitle
-          title="Why Air-Purifying Plants?"
-          description="Discover how air-purifying plants can enhance your home and
-            well-being. From cleaner air to better sleep, these natural wonders
-            offer countless benefits for a healthier, happier lifestyle."
+          title={SECTION_CONFIG.plantBenefits.title}
+          subtitle={SECTION_CONFIG.plantBenefits.subtitle}
+          description={SECTION_CONFIG.plantBenefits.description}
         />
-
         <Row className="g-4">
           {plantBenefitsData.map((benefit) => (
             <Col md={4} key={benefit.id}>

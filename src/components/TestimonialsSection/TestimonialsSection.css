@@ -1,0 +1,23 @@
+.quotes {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.testimonials-section .card-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+}
+
+.card-footer {
+  background-color: transparent !important;
+}

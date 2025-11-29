@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card,Button  } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { SECTION_CONFIG } from "../../data/config/SectionConfig";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -7,7 +7,6 @@ import { CategoriesData } from "../../data/CategoriesData";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { PiClockCountdownBold } from "react-icons/pi";
 import "./CategoriesSection.css";
-
 
 const CategoriesSection = ({ limit = 4 }) => {
   const preview = CategoriesData.slice(0, limit);
@@ -22,6 +21,7 @@ const CategoriesSection = ({ limit = 4 }) => {
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.categories.title}
+          subtitle={SECTION_CONFIG.categories.subtitle}
           description={SECTION_CONFIG.categories.description}
         />
         <Row className="fade-in delay-1s">
