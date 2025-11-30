@@ -1,0 +1,90 @@
+.faq-section {
+  position: relative;
+}
+
+.faq-section::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  /* right: 0; */
+  /* bottom: 0; */
+  width: 35%;
+  height: 100%;
+  background: url("/images/bg/leaves2-t.png") no-repeat;
+  background-size: contain;
+  opacity: 0.25;
+}
+
+.accordion {
+  --bs-accordion-bg: transparent !important;
+  color: var(--color-white) !important;
+}
+
+/* Remove default arrow */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Custom header styling */
+.accordion-button {
+  background: var(--color-primary-50) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-primary) !important;
+  box-shadow: 0 2px 6px rgba(0, 90, 0, 0.08);
+  transition: background 0.3s;
+}
+
+/* Hover effect */
+.accordion-button:hover {
+  background: var(--color-primary-100) !important;
+}
+
+/* Remove blue empty focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Icon */
+.faq-icon {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 12px;
+  color: var(--color-text-dark);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Rotate when open */
+.faq-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Title styling */
+.faq-title {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+}
+
+/* Smooth fade + slide for accordion body */
+.accordion-body {
+  background: transparent !important;
+  border-left: 0.3125rem solid var(--color-primary) !important;
+  padding: 1rem 1.25rem;
+  animation: faqSlide 0.35s ease forwards;
+}
+
+@keyframes faqSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

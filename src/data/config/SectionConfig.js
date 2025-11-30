@@ -91,6 +91,59 @@ export const SECTION_CONFIG = {
     description:
       "Explore the stories of plant lovers who have embraced the benefits of air-purifying plants in their living spaces.",
   },
+  faqs: {
+    title: "Frequently Asked Questions",
+    subtitle: "FAQs",
+    description:
+      "Find solutions to common queries about air-purifying plants and their maintenance.",
+
+    // answer2: "The watering frequency depends on the specific plant species, but generally, it's best to water when the top inch of soil feels dry. Overwatering can lead to root rot, so ensure proper drainage.",
+    // answer1: "Some of the best air-purifying plants for beginners include Snake Plant, Spider Plant, and Pothos. These plants are easy to care for and thrive in various indoor conditions.",
+    // question1: "What are the best air-purifying plants for beginners?",
+
+    // question2: "How often should I water my air-purifying plants?",
+    // question3: "Do air-purifying plants need direct sunlight?",
+    // question4: "Can air-purifying plants improve indoor air quality?",
+    // question5: "How do I care for my air-purifying plants during the winter months?",
+    // description:
+    // "Learn about the benefits and care of air-purifying plants through our FAQ section.",
+    // description2:
+    // "Get answers to frequently asked questions about air-purifying plants, including care tips and benefits.",
+    // description3:
+    // "Find answers to common questions about air-purifying plants, their care, and benefits to help you make the most of your green space.",
+    // description4:
+    // "Discover helpful information about air-purifying plants through our FAQ section.",
+    // description5:
+    // "Find out more about indoor plants with answers to frequently asked questions.",
+    // description6:
+    // "Explore common questions and answers about air-purifying plants and their care.",
+    // description7:
+    // "Get insights into air-purifying plants with answers to popular questions from plant lovers.",
+    // description8:
+    // "Learn more about air-purifying plants with answers to common questions from plant enthusiasts.",
+    // description9:
+
+    // description:
+    // "Get answers to common questions about our air-purifying plants, including care tips, benefits, and more.",
+    // description3:
+    // "Find answers to common questions about our air-purifying plants, care tips, and more to help you make the most of your green space.",
+    // description2:
+    // "Get answers to frequently asked questions about our air-purifying plants, including care tips and benefits.",
+    // description3:
+    // "Learn more about our air-purifying plants with answers to common questions from plant enthusiasts.",
+    // description4:
+    // "Discover helpful information about our air-purifying plants through our FAQ section.",
+    // description5:
+    // "Find out more about indoor plants with answers to frequently asked questions.",
+    // description6:
+    // "Explore common questions and answers about air-purifying plants and their care.",
+    // description7:
+    // "Get insights into our air-purifying plants with answers to popular questions from plant lovers.",
+    // description8:
+
+    // description9:
+    // "Find solutions to common queries about our air-purifying plants and their maintenance.",
+  },
   // description5:
   // "See what plant enthusiasts have to say about the transformative power of air-purifying plants in their homes.",
   // description6:
