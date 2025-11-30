@@ -355,7 +355,9 @@ h5 {
   box-shadow: var(--shadow-light);
 }
 
-.section-wrapper:not(.hero-section):not(.testimonials-section):nth-child(even) {
+.section-wrapper:not(.hero-section):not(.testimonials-section):not(
+    .faq-section
+  ):nth-child(even) {
   background-color: var(--color-accent-light) !important;
 }
 

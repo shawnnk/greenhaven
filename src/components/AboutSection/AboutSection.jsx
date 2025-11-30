@@ -10,7 +10,7 @@ import "./AboutSection.css";
 const AboutSection = () => {
   return (
     <section id="about-section" className="about-section section-wrapper">
-      <img src={aboutLeftImage} className="left-plant" alt="" />
+      <img src={aboutLeftImage} className="img-fluid left-plant" alt="" />
 
       <Container className="container-wrapper">
         {/* <SectionTitle title="Why Indoor Plants?" subTitle="About" /> */}

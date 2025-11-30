@@ -9,6 +9,7 @@ import FeaturedPlantsSection from "../../components/FeaturedPlantsSection/Featur
 import CategoriesSection from "../../components/CategoriesSection/CategoriesSection";
 import GallerySection from "../../components/GallerySection/GallerySection";
 import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection";
+import FaqSection from "../../components/FaqSection/FaqSection";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <AboutMeSection />
       <TestimonialsSection />
       <GallerySection />
+      <FaqSection />
     </>
   );
 };
