@@ -1,20 +1,20 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { CategoriesData } from "../../data/CategoriesData";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { CategoriesData } from "../../../data/CategoriesData";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { PiClockCountdownBold } from "react-icons/pi";
-import "./CategoriesSection.css";
+import "./Categories.css";
 
-const CategoriesSection = ({ limit = 4 }) => {
+const Categories = ({ limit = 4 }) => {
   const preview = CategoriesData.slice(0, limit);
 
   return (
     <section
-      id="categories-section"
-      className="categories-section section-wrapper"
+      id="categories"
+      className="categories-section section-wrapper alt-bg"
     >
       {/* <img src={aboutLeftImage} className="left-plant" alt="" /> */}
 
@@ -72,4 +72,4 @@ const CategoriesSection = ({ limit = 4 }) => {
   );
 };
 
-export default CategoriesSection;
+export default Categories;

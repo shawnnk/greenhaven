@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
 import aboutImage from "/images/about.png";
 import aboutLeftImage from "/images/about-bg.png";
-import "./AboutSection.css";
+import "./About.css";
 
-const AboutSection = () => {
+const About = () => {
   return (
-    <section id="about-section" className="about-section section-wrapper">
-      <img src={aboutLeftImage} className="img-fluid left-plant" alt="" />
+    <section id="about" className="about-section section-wrapper">
+      {/* <img src={aboutLeftImage} className="img-fluid left-plant" alt="" /> */}
 
       <Container className="container-wrapper">
         {/* <SectionTitle title="Why Indoor Plants?" subTitle="About" /> */}
@@ -104,4 +104,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;

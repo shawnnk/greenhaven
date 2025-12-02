@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
-import { TestimonialsData } from "../../data/TestimonialsData";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
+import { TestimonialsData } from "../../../data/TestimonialsData";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import "./TestimonialsSection.css";
+import "./Testimonials.css";
 
-const TestimonialsSection = () => {
+const Testimonials = () => {
   return (
     <section
       id="testimonials-section"
-      className="testimonials-section section-wrapper"
+      className="testimonials-section section-wrapper alt-bg"
     >
       <Container className="container-wrapper">
         <SectionTitle
@@ -58,4 +58,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default Testimonials;

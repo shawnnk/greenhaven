@@ -1,15 +1,14 @@
 import React from "react";
 import "./Home.css";
-
-import AboutSection from "../../components/AboutSection/AboutSection";
-import HeroSection from "../../components/HeroSection/HeroSection";
-import AboutMeSection from "../../components/AboutMeSection/AboutMeSection";
-import PlantBenefitsSection from "../../components/PlantBenefitsSection/PlantBenefitsSection";
-import FeaturedPlantsSection from "../../components/FeaturedPlantsSection/FeaturedPlantsSection";
-import CategoriesSection from "../../components/CategoriesSection/CategoriesSection";
-import GallerySection from "../../components/GallerySection/GallerySection";
-import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection";
-import FaqSection from "../../components/FaqSection/FaqSection";
+import HeroSection from "../../components/homepage/Hero/Hero";
+import AboutSection from "../../components/homepage/About/About";
+import PlantBenefitsSection from "../../components/homepage/PlantBenefits/PlantBenefits";
+import FeaturedPlantsSection from "../../components/homepage/FeaturedPlants/FeaturedPlants";
+import CategoriesSection from "../../components/homepage/Categories/Categories";
+import AboutMeSection from "../../components/homepage/AboutMe/AboutMe";
+import TestimonialsSection from "../../components/homepage/Testimonials/Testimonials";
+import GallerySection from "../../components/homepage/Gallery/Gallery";
+import FaqSection from "../../components/homepage/Faq/Faq";
 
 const Home = () => {
   return (
