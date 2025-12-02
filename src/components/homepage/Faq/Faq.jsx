@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
 // import faqImage from "/images/bg/leaves2-t.png";
-import { faqData } from "../../data/FaqData";
-import "./FaqSection.css";
+import { faqData } from "../../../data/FaqData";
+import "./Faq.css";
 
-const FaqSection = () => {
+const Faq = () => {
   const [activeKey, setActiveKey] = useState("0");
 
   const handleToggle = (key) => {
@@ -14,7 +14,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq-section" className="faq-section section-wrapper">
+    <section id="faq" className="faq-section section-wrapper alt-bg">
       {/* <img src={faqImage} className="faq-bg-image" alt="" /> */}
       <Container className="container-wrapper">
         <SectionTitle
@@ -53,4 +53,4 @@ const FaqSection = () => {
   );
 };
 
-export default FaqSection;
+export default Faq;

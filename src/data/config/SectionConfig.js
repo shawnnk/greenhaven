@@ -1,11 +1,7 @@
-import Gallery from "../../pages/Gallery/Gallery";
-
 export const SECTION_CONFIG = {
   about: {
     title: "Why Indoor Plants?",
     subtitle: "About",
-    // description:
-    //   "Indoor plants do more than decorate — they help clean the air, boost your mood, and bring life into your living space. Studies have shown that some plants can reduce toxins and create a calmer, healthier atmosphere.",
   },
   featuredPlants: {
     title: "Featured Air-Purifying Plants",
@@ -182,5 +178,10 @@ export const SECTION_CONFIG = {
     title: "Get in Touch",
     description:
       "Have questions or need help? Reach out to our team for support, recommendations, or more information about our plants.",
+  },
+
+  gallery1: {
+    title: "Green Haven",
+    description: "",
   },
 };

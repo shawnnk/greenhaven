@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
-import { FeaturedPlantsData } from "../../data/FeaturedPlantsData";
-import "./FeaturedPlantsSection.css";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
+import { FeaturedPlantsData } from "../../../data/FeaturedPlantsData";
+import "./FeaturedPlants.css";
 
-const FeaturedPlantsSection = ({ limit = 3 }) => {
+const FeaturedPlants = ({ limit = 3 }) => {
   const preview = FeaturedPlantsData.slice(0, limit);
 
   return (
     <section
-      id="featuredPlants-section"
+      id="featuredPlants"
       className="featuredPlants-section section-wrapper"
     >
       {/* <img src={aboutLeftImage} className="left-plant" alt="" /> */}
@@ -54,7 +54,7 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
         </Row>
 
         <div className="text-center mt-4">
-          <Link to="/plants" className="btn btn-green btn-outline-green">
+          <Link to="/plants" className="btn btn-green">
             View All Plants
           </Link>
         </div>
@@ -63,4 +63,4 @@ const FeaturedPlantsSection = ({ limit = 3 }) => {
   );
 };
 
-export default FeaturedPlantsSection;
+export default FeaturedPlants;

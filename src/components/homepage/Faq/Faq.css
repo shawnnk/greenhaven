@@ -2,13 +2,11 @@
   position: relative;
 }
 
-.faq-section::before {
+.faq-section11::before {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
-  /* right: 0; */
-  /* bottom: 0; */
   width: 35%;
   height: 100%;
   background: url("/images/bg/leaves2-t.png") no-repeat;
@@ -17,8 +15,8 @@
 }
 
 .accordion {
-  --bs-accordion-bg: transparent !important;
-  color: var(--color-white) !important;
+  --bs-accordion-bg: var(--color-white) !important;
+  /* color: var(--color-white) !important; */
 }
 
 /* Remove default arrow */
@@ -50,12 +48,15 @@
   box-shadow: none !important;
 }
 
+/* .accordion-button:not(.collapsed) {
+  background: var(--color-primary-100) !important;
+} */
 /* Icon */
 .faq-icon {
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-left: 12px;
-  color: var(--color-text-dark);
+  color: var(--color-secondary);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -73,7 +74,7 @@
 /* Smooth fade + slide for accordion body */
 .accordion-body {
   background: transparent !important;
-  border-left: 0.3125rem solid var(--color-primary) !important;
+  /* border-left: 0.3125rem solid var(--color-primary) !important; */
   padding: 1rem 1.25rem;
   animation: faqSlide 0.35s ease forwards;
 }

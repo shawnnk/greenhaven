@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { GalleryData } from "../../data/GalleryData";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { GalleryData } from "../../../data/GalleryData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./GallerySection.css";
+import "./Gallery.css";
 
-const GallerySection = () => {
+const Gallery = () => {
   const settings = {
     dots: true, // Show dots below slider
     infinite: true, // Loop back to start
@@ -37,7 +37,7 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery-section" className="gallery-section section-wrapper">
+    <section id="gallery" className="gallery-section section-wrapper">
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.gallery.title}
@@ -65,4 +65,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default Gallery;

@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
-import { plantBenefitsData } from "../../data/PlantBenefitsData";
-import "./PlantBenefitsSection.css";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
+import { plantBenefitsData } from "../../../data/PlantBenefitsData";
+import "./PlantBenefits.css";
 
-const PlantBenefitsSection = () => {
+const PlantBenefits = () => {
   return (
-    <section id="benefits-section" className="benefits-section section-wrapper">
+    <section
+      id="plantBenefits"
+      className="PlantBenefits-section section-wrapper alt-bg"
+    >
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.plantBenefits.title}
@@ -17,7 +20,7 @@ const PlantBenefitsSection = () => {
         <Row className="g-4">
           {plantBenefitsData.map((benefit) => (
             <Col md={4} key={benefit.id}>
-              <Card className="h-100 benefits-card text-center fade-in">
+              <Card className="h-100 card benefits-card text-center fade-in">
                 <Card.Body>
                   <div
                     className="benefit-icon"
@@ -37,4 +40,4 @@ const PlantBenefitsSection = () => {
   );
 };
 
-export default PlantBenefitsSection;
+export default PlantBenefits;

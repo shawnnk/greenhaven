@@ -1,18 +1,18 @@
 import React from "react";
 import { Container, Row, Col, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { SECTION_CONFIG } from "../../data/config/SectionConfig";
+import SectionTitle from "../../ui/SectionTitle/SectionTitle";
+import { SECTION_CONFIG } from "../../../data/config/SectionConfig";
 import aboutmeImage from "/images/aboutme.jpg";
-import "./AboutMeSection.css";
+import "./AboutMe.css";
 
-const AboutMeSection = () => {
+const AboutMe = () => {
   return (
     <section id="aboutme" className="aboutme-section section-wrapper">
       <Container className="container-wrapper">
         <SectionTitle
           title={SECTION_CONFIG.aboutMe.title}
-           subtitle={SECTION_CONFIG.aboutMe.subtitle}
+          subtitle={SECTION_CONFIG.aboutMe.subtitle}
           description={SECTION_CONFIG.aboutMe.description}
         />
         <Row className="aboutme-content justify-content-center align-items-center fade-in delay-1s">
@@ -85,4 +85,4 @@ const AboutMeSection = () => {
   );
 };
 
-export default AboutMeSection;
+export default AboutMe;
