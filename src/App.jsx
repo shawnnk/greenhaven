@@ -15,6 +15,7 @@ import Blog from "./pages/Blog/Blog";
 import Gallery from "./pages/Gallery/Gallery";
 import Contact from "./pages/Contact/Contact";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import GalleryPage from "./components/Gallery/GalleryPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +23,8 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/plants" element={<Blog />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/gallery" element={<Gallery />} />
+      <Route path="gallery" element={<GalleryPage />} />
+      {/* <Route path="/gallery" element={<Gallery />} /> */}
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>

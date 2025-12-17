@@ -12,6 +12,11 @@
   margin-bottom: 1rem;
 }
 
+.testimonial-image {
+  width: 4rem;
+  height: 4rem;
+}
+
 .testimonial-info {
   display: flex;
   flex-flow: column nowrap;

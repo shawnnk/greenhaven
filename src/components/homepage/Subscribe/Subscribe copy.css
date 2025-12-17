@@ -1,0 +1,28 @@
+.newsLetter-section {
+  /* position: relative; */
+  margin-top: -150px;
+  /* overlaps FAQ */
+  z-index: 5;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.newsLetter-section .container-wrapper {
+  position: relative;
+  margin-top: -180px;
+  padding-bottom: 80px;
+}
+
+.newsletter-card {
+  position: absolute;
+  margin-top: -180px;
+  background: var(--color-primary);
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 40px 40px 40px rgba(0, 0, 0, 1);
+  transform: translateY(30%); /* float card downward into footer */
+  position: relative;
+  z-index: 10;
+}

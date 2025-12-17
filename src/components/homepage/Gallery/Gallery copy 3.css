@@ -1,0 +1,40 @@
+.slider-container11 {
+  margin: 0 auto;
+  width: 100%;
+  height: 25rem;
+  padding: 1rem 3rem;
+  margin: 1rem;
+  /* background-color: red !important; */
+}
+
+.slick-list {
+  width: 100% !important;
+  background-color: chartreuse;
+  /* padding: 2rem; */
+}
+
+.slick-slide {
+  /* width: 100% !important; */
+  height: 40%;
+  background-color: blue;
+  padding: 0.3rem;
+}
+
+.img-body {
+  /* width: 23rem; */
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+}
+
+.img-body img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.slick-track {
+  /* width: 250px !important; */
+  /* transform: none !important; */
+}

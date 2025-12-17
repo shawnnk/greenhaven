@@ -7,13 +7,15 @@ import aboutmeImage from "/images/aboutme.jpg";
 import "./AboutMe.css";
 
 const AboutMe = () => {
+  const { title, subtitle, description } = SECTION_CONFIG.aboutMe;
+
   return (
-    <section id="aboutme" className="aboutme-section section-wrapper">
+    <section id="aboutMe" className="aboutMe-section section-wrapper alt-bg">
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.aboutMe.title}
-          subtitle={SECTION_CONFIG.aboutMe.subtitle}
-          description={SECTION_CONFIG.aboutMe.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="aboutme-content justify-content-center align-items-center fade-in delay-1s">
           <Col>

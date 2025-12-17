@@ -7,7 +7,7 @@ const SectionTitle = ({ title, subtitle, description }) => {
     <Row className="justify-content-center align-items-center text-center fade-in">
       <Col>
         {subtitle && <h5 className="section-subtitle">{subtitle}</h5>}
-        {subtitle && <h2 className="section-title">{title}</h2>}
+        {title && <h2 className="section-title">{title}</h2>}
         {description && <p className="section-description">{description}</p>}
       </Col>
     </Row>

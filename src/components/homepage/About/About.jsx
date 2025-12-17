@@ -8,16 +8,17 @@ import aboutLeftImage from "/images/about-bg.png";
 import "./About.css";
 
 const About = () => {
+  const { title, subtitle, description } = SECTION_CONFIG.about;
+
   return (
-    <section id="about" className="about-section section-wrapper">
+    <section id="about" className="about-section section-wrapper alt-bg">
       {/* <img src={aboutLeftImage} className="img-fluid left-plant" alt="" /> */}
 
       <Container className="container-wrapper">
-        {/* <SectionTitle title="Why Indoor Plants?" subTitle="About" /> */}
-        <SectionTitle
-          title={SECTION_CONFIG.about.title}
-          subtitle={SECTION_CONFIG.about.subtitle}
-          description={SECTION_CONFIG.about.description}
+       <SectionTitle
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="about-content justify-content-center align-items-center fade-in delay-1s">
           <Col>

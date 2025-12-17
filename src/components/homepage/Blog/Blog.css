@@ -1,0 +1,13 @@
+.blog-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.blog-card .card-body {
+  padding: 1rem;
+}
+
+.blog-card .card-footer {
+  background: none;
+  border-top: 1px solid #eee;
+}
