@@ -8,19 +8,20 @@ import "./Faq.css";
 
 const Faq = () => {
   const [activeKey, setActiveKey] = useState("0");
+  const { title, subtitle, description } = SECTION_CONFIG.faqs;
 
   const handleToggle = (key) => {
     setActiveKey(activeKey === key ? null : key);
   };
 
   return (
-    <section id="faq" className="faq-section section-wrapper alt-bg">
+    <section id="faqs" className="faq-section section-wrapper">
       {/* <img src={faqImage} className="faq-bg-image" alt="" /> */}
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.faqs.title}
-          subtitle={SECTION_CONFIG.faqs.subtitle}
-          description={SECTION_CONFIG.faqs.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
 
         <Row className="faq-content justify-content-center fade-in delay-1s mb-4">

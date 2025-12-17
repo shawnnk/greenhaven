@@ -6,8 +6,8 @@
 }
 
 .section-subtitle {
-  margin-bottom: 0;
-  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0 !important;
   line-height: 1.4;
@@ -23,7 +23,7 @@
   background-color: var(--color-text-dark);
   content: "";
   display: inline-block;
-  width: 2.5rem;
+  width: 2rem;
   height: 0.18rem;
   position: relative;
   vertical-align: middle;
@@ -40,7 +40,7 @@
 }
 
 .section-description {
-  font-size: var(--section-description-font-size);
+  font-size: var(--section-description-font-size) !important;
   max-width: var(--section-description-max-width);
   margin: var(--section-description-margin);
 }

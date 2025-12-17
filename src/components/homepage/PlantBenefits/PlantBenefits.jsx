@@ -6,16 +6,18 @@ import { plantBenefitsData } from "../../../data/PlantBenefitsData";
 import "./PlantBenefits.css";
 
 const PlantBenefits = () => {
+  const { title, subtitle, description } = SECTION_CONFIG.plantBenefits;
+
   return (
     <section
       id="plantBenefits"
-      className="PlantBenefits-section section-wrapper alt-bg"
+      className="PlantBenefits-section section-wrapper"
     >
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.plantBenefits.title}
-          subtitle={SECTION_CONFIG.plantBenefits.subtitle}
-          description={SECTION_CONFIG.plantBenefits.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="g-4">
           {plantBenefitsData.map((benefit) => (

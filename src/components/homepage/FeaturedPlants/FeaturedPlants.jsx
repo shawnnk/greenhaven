@@ -8,19 +8,20 @@ import "./FeaturedPlants.css";
 
 const FeaturedPlants = ({ limit = 3 }) => {
   const preview = FeaturedPlantsData.slice(0, limit);
+  const { title, subtitle, description } = SECTION_CONFIG.featuredPlants;
 
   return (
     <section
       id="featuredPlants"
-      className="featuredPlants-section section-wrapper"
+      className="featuredPlants-section section-wrapper alt-bg"
     >
       {/* <img src={aboutLeftImage} className="left-plant" alt="" /> */}
 
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.featuredPlants.title}
-          subtitle={SECTION_CONFIG.featuredPlants.subtitle}
-          description={SECTION_CONFIG.featuredPlants.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="fade-in delay-1s">
           {preview.map((plant) => (

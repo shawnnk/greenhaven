@@ -1,13 +1,12 @@
-import React from "react";
-import "./Footer.css";
+import React, { useState } from "react";
 import {
   Container,
   Row,
   Col,
   Form,
-  ListGroup,
-  InputGroup,
   Button,
+  Accordion,
+  ListGroup,
 } from "react-bootstrap";
 import {
   FaLink,
@@ -18,149 +17,69 @@ import {
   FaFacebook,
   FaXTwitter,
 } from "react-icons/fa6";
-import { MdOutlineContactMail, MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import { BsHouseUpFill } from "react-icons/bs";
-import { useLocation } from "react-router-dom";
-import { PiMailboxDuotone } from "react-icons/pi";
+import { Link, useLocation } from "react-router-dom";
+// Logo SVG
+// import Logo from "/images/logo.png";
+import "./Footer.css";
+import FooterNewsletter from "./FooterNewsletter";
+import FooterContact from "./FooterContact";
+import FooterTopLinks from "./FooterColumnTopLinks";
+import FooterQuickLinks from "./FooterColumnQuickLinks";
+import FooterLegal from "./FooterColumnLegal";
+import FooterBottom from "./FooterBottom";
 
 const Footer = () => {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
+  const sections = [
+    "about",
+    "plantBenefits",
+    "featuredPlants",
+    // "blog",
+    "aboutMe",
+    "testimonials",
+    "gallery",
+    // "faqs",
+  ];
   return (
-    <footer className="footer-section">
-      <Container>
-        <Row
-          xs={1}
-          sm={2}
-          md={4}
-          className="footer-content gy-4 gx-sm-0 justify-content-between"
-        >
+    <footer id="footer" className="footer-section footer-wrapper">
+      {/* 🌿 Animated Vine Top Divider */}
+      {/* <div className="vine-divider"></div> */}
+      <FooterNewsletter />
+      <Container className="container-wrapper">
+        <Row className="footer-content justify-content-center g-4">
           <Col md={4} className="col">
-            <h3>Green Haven</h3>
+            <h3 className="brand"> Green Haven</h3>
             <p className="footer-description">
-              Discover the joy of nurturing indoor plants and transform spaces
-              into living sanctuaries.
+              Discover the joy of nurturing indoor plants and transform your
+              space into a living sanctuary.
             </p>
-            <ListGroup variant="flush">
-              <ListGroup.Item>
-                <FaPhoneVolume className="icon me-2" />
-                <a href="tel:+64073474659"> +(64) (07) 347-4659</a>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <MdEmail className="icon me-2" />
-                <a href="mailto:info@greenhaven.com">info@greenhaven.com</a>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <FaLocationDot className="icon me-2" />
-                21 Lake Road,
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rotorua, NZ 3040
-              </ListGroup.Item>
-            </ListGroup>
+            <FooterContact />
           </Col>
-          <Col md={2} className="col">
-            {isHomePage ? (
-              <>
-                <h5>
-                  <span className="fa-icon me-1">
-                    <BsHouseUpFill />
-                  </span>
-                  Top Links
-                </h5>
-                <ListGroup variant="flush" className="ms-2">
-                  <ListGroup.Item>
-                    <a href="#aboutme">About Me</a>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <a href="#about">About</a>
-                  </ListGroup.Item>
-
-                  <ListGroup.Item>
-                    <a href="#blog">Blog</a>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <a href="#testimonials">Testimonials</a>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <a href="#gallery">Gallery</a>
-                  </ListGroup.Item>
-                </ListGroup>
-              </>
-            ) : (
-              <>
-                <h4>
-                  <span className="fa-icon me-1">
-                    <FaCompass />
-                  </span>
-                  Explore
-                </h4>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>
-                    <a href="#">Plant Guides</a>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <a href="#">Tips & Tricks</a>
-                  </ListGroup.Item>
-                </ListGroup>
-              </>
-            )}
-          </Col>
-          <Col md={2} className="col">
-            <h5>
-              <span className="fa-icon me-2">
-                <FaLink />
-              </span>
-              Quick Links
+          <Col md={3} className="col">
+            <h5 className="footer-title">
+              {/* <BsHouseUpFill />  */}
+              Top Links
             </h5>
-            <ListGroup variant="flush">
-              <ListGroup.Item>
-                <a href="#">About Us</a>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <a href="#">Plants</a>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <a href="#">Contact</a>
-              </ListGroup.Item>
-
-              <ListGroup.Item className="d-block d-sm-none">
-                <a href="#">Privacy Policy</a>
-              </ListGroup.Item>
-              <ListGroup.Item className="d-block d-sm-none">
-                <a href="#">Terms & Conditions</a>
-              </ListGroup.Item>
-
-              <ListGroup.Item>
-                <a href="#">FAQ</a>
-              </ListGroup.Item>
-            </ListGroup>
+            <FooterTopLinks sections={sections} />
           </Col>
-
           <Col md={2} className="col">
-            <h5>
-              <span className="fa-icon me-2">
-                <FaScaleBalanced />
-              </span>
-              Legal Info
+            <h5 className="footer-title">
+              {/* <FaLink />  */}
+              {/* Quick Links */}
+              {/* Help &  */}
+              Resources
             </h5>
-            <ListGroup variant="flush">
-              <ListGroup.Item>
-                <a href="#">Privacy Policy</a>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <a href="#">Terms & Conditions</a>
-              </ListGroup.Item>
-            </ListGroup>
+            <FooterQuickLinks />
+          </Col>
+          <Col md={3} className="col">
+            <h5 className="footer-title">Legal & Contact</h5>
+            <FooterLegal />
           </Col>
         </Row>
       </Container>
-      <Container fluid className="p-0">
-        <hr />
-        <div className="text-center pb-3">
-          &copy; 2024 Green Haven. All rights reserved.
-        </div>
-      </Container>
+      <hr className="text-muted" />
+      <FooterBottom />
     </footer>
   );
 };

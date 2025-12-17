@@ -7,16 +7,14 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import "./Testimonials.css";
 
 const Testimonials = () => {
+  const { title, subtitle, description } = SECTION_CONFIG.testimonials;
   return (
-    <section
-      id="testimonials-section"
-      className="testimonials-section section-wrapper alt-bg"
-    >
+    <section id="testimonials" className="testimonials-section section-wrapper">
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.testimonials.title}
-          subtitle={SECTION_CONFIG.testimonials.subtitle}
-          description={SECTION_CONFIG.testimonials.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="fade-in delay-1s">
           {TestimonialsData.map((testimonial) => (
@@ -30,7 +28,8 @@ const Testimonials = () => {
                 </Card.Body>
                 <Card.Footer>
                   <Row>
-                    <Col sm={4} className="d-flex align-items-center">
+                    {/* <Col> */}
+                    <Col className="d-flex align-items-center gap-3">
                       <div className="testimonials-image-wrapper text-center rounded-circle overflow-hidden shadow-md">
                         <Image
                           src={testimonial.image}
@@ -38,8 +37,8 @@ const Testimonials = () => {
                           alt={testimonial.image}
                         />
                       </div>
-                    </Col>
-                    <Col sm={7} className="d-flex align-items-center">
+                      {/* </Col> */}
+                      {/* <Col sm={8} className="d-flex align-items-center"> */}
                       <div className="testimonial-info">
                         <cite className="testimonial-title">
                           {testimonial.name}

@@ -1,0 +1,100 @@
+.subscribe-section {
+  /* position: relative;
+  overflow: hidden; */
+  /* background-color: var(--color-white); */
+  /* z-index: 1; */
+}
+
+.subscribe-section11::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgb(1, 43, 1, 0.8), rgb(1, 43, 1, 0.9)),
+    url("/images/bg/monstera.jpg"); */
+  background: url("/images/bg/monstera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  /* z-index: -1; */
+}
+
+.subscribe-form {
+  /* padding: 3.125rem 1.25rem; */
+  max-width: 28rem;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-section .section-description {
+  margin: 1rem auto 2rem;
+  font-size: 1rem;
+}
+
+.subscribe-content {
+  background-color: var(--color-white);
+  /* border: 1px solid #888; */
+  padding: 2rem 2rem;
+  box-shadow: var(--box-shadow-image);
+}
+
+.form-input-group {
+}
+
+.subscribe-form .form-input-group {
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  max-width: 32rem;
+  padding: 0.3125rem;
+  box-shadow: 0 20px 7px var(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.subscribe-form .email-input {
+  background: transparent;
+  border: none;
+}
+
+.subscribe-form .email-input:focus {
+  background: transparent;
+  box-shadow: none;
+}
+.subscribe-form .subscribe-btn {
+  border-radius: var(--border-radius);
+}
+
+.text-success {
+  color: var(--color-secondary) !important;
+}
+
+.feedback-message {
+  min-height: 1.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.feedback-message.fade-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-subscribe {
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -10,19 +10,17 @@ import "./Categories.css";
 
 const Categories = ({ limit = 4 }) => {
   const preview = CategoriesData.slice(0, limit);
+  const { title, subtitle, description } = SECTION_CONFIG.categories;
 
   return (
-    <section
-      id="categories"
-      className="categories-section section-wrapper alt-bg"
-    >
+    <section id="categories" className="categories-section section-wrapper">
       {/* <img src={aboutLeftImage} className="left-plant" alt="" /> */}
 
       <Container className="container-wrapper">
         <SectionTitle
-          title={SECTION_CONFIG.categories.title}
-          subtitle={SECTION_CONFIG.categories.subtitle}
-          description={SECTION_CONFIG.categories.description}
+          title={title}
+          subtitle={subtitle}
+          description={description}
         />
         <Row className="fade-in delay-1s">
           {preview.map((category) => (
